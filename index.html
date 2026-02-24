@@ -9,7 +9,7 @@
         content="Entry-Level Software Developer specializing in Full Stack MERN, AI systems, and blockchain security.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +20,7 @@
     <nav id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="nav-inner">
-                <a href="#hero" class="nav-logo">Mani</a>
+                <a href="#hero" class="nav-logo">Welcome</a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -30,7 +30,12 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
                     <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
                         <span></span><span></span><span></span>
                     </div>
@@ -52,6 +57,7 @@
     <!-- HERO -->
     <section id="hero">
         <div class="hero-bg">
+            <div class="hero-noise"></div>
             <div class="hero-grid"></div>
             <div class="hero-orb hero-orb-1"></div>
             <div class="hero-orb hero-orb-2"></div>
@@ -60,47 +66,118 @@
         <div class="container">
             <div class="hero-inner">
 
-                <!-- Avatar ring at top center -->
-                <!-- Name & title -->
-                <h1 class="hero-name">
-                    <span class="grad-text">Manimehalai</span> 
-                </h1>
-                <p class="hero-title">Full Stack Developer · AI Enthusiast · Security Innovator</p>
+                <!-- Left Column: Content -->
+                <div class="hero-content">
+                    <h1 class="hero-name">
+                        Hi, I'm <span class="grad-text">Manimehalai</span><br>
+                        Developing the <span class="grad-text">Future.</span>
+                    </h1>
+                    <p class="hero-title">Software Developer specialized in Full Stack, AI & Security Innovation.</p>
 
-                <!-- Stats row -->
-                <div class="hero-stats-row">
-                    <div class="hero-stat">
-                        <div class="stat-num grad-text">4+</div>
-                        <div class="stat-label">Projects</div>
+                    <!-- Stats row -->
+                    <div class="hero-stats-row">
+                        <div class="hero-stat">
+                            <div class="stat-num grad-text">04+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <div class="stat-num grad-text">03+</div>
+                            <div class="stat-label">Internships</div>
+                        </div>
                     </div>
-                    <div class="hero-stat-divider"></div>
-                    <div class="hero-stat">
-                        <div class="stat-num grad-text">3+</div>
-                        <div class="stat-label">Internships</div>
+
+                    <!-- CTAs -->
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn-primary">Explore Work <span class="btn-arrow"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg></span></a>
+                        <button onclick="downloadResume()" class="btn-outline btn-resume">
+                            Download Resume
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="hero-stat-divider"></div>
-                    <div class="hero-stat">
-                        <div class="stat-num grad-text">90%</div>
-                        <div class="stat-label">Risk Reduced</div>
-                    </div>
-                    <div class="hero-stat-divider"></div>
-                    <div class="hero-stat">
-                        <div class="stat-num grad-text">85%</div>
-                        <div class="stat-label">AI Accuracy</div>
-                    </div>
+
                 </div>
 
-                <!-- Description -->
-        
-
-                <!-- CTAs -->
-                <div class="hero-cta">
-                    <a href="#projects" class="btn-primary">View Projects ↓</a>
-                    <a href="#contact" class="btn-outline">Contact Me →</a>
+                <!-- Right Column: Skills Cluster -->
+                <div class="hero-skills-container">
+                    <div class="skills-cluster">
+                        <div class="skill-box box-1">
+                            <span class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                                </svg>
+                            </span>
+                            <div class="skill-details">
+                                <span class="skill-label">Full Stack</span>
+                                <span class="skill-sub">MERN / Java</span>
+                            </div>
+                        </div>
+                        <div class="skill-box box-2">
+                            <span class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 2a10 10 0 1 0 10 10H12V2z" />
+                                    <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
+                                    <path d="M12 12L2.1 12.5" />
+                                    <path d="M12 12l9.5 0.5" />
+                                    <path d="M12 12l-5-8.5" />
+                                    <path d="M12 12l5 8.5" />
+                                </svg>
+                            </span>
+                            <div class="skill-details">
+                                <span class="skill-label">AI & ML</span>
+                                <span class="skill-sub">Python / OpenCV</span>
+                            </div>
+                        </div>
+                        <div class="skill-box box-3">
+                            <span class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                            </span>
+                            <div class="skill-details">
+                                <span class="skill-label">Security</span>
+                                <span class="skill-sub">Blockchain / AES</span>
+                            </div>
+                        </div>
+                        <div class="skill-box box-4">
+                            <span class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path
+                                        d="M12 5c6.627 0 12 1.567 12 3.5S18.627 12 12 12 0 10.433 0 8.5 5.373 5 12 5z" />
+                                    <path
+                                        d="M12 12c6.627 0 12 1.567 12 3.5S18.627 19 12 19 0 17.433 0 15.5 5.373 12 12 12z" />
+                                </svg>
+                            </span>
+                            <div class="skill-details">
+                                <span class="skill-label">Frontend</span>
+                                <span class="skill-sub">React / UX</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Location badge -->
-                <div class="hero-location">📍 India &nbsp;·&nbsp; B.E CSE 2025</div>
 
             </div>
         </div>
@@ -128,39 +205,63 @@
                 <div class="reveal-right">
                     <div class="about-img-wrap">
                         <div class="about-values">
-                        <div class="about-value">
-                            <div class="value-icon">🔐</div>
-                            <div>
-                                <div class="value-text">Security First</div>
-                                <div class="value-sub">Building with trust at the core</div>
-                                
+                            <div class="about-value">
+                                <div class="value-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="value-text">Security First</div>
+                                    <div class="value-sub">Building with trust at the core</div>
+                                </div>
+                            </div>
+                            <div class="about-value">
+                                <div class="value-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="value-text">Performance</div>
+                                    <div class="value-sub">Optimized for scale</div>
+                                </div>
+                            </div>
+                            <div class="about-value">
+                                <div class="value-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="value-text">AI & ML</div>
+                                    <div class="value-sub">Intelligent solutions</div>
+                                </div>
+                            </div>
+                            <div class="about-value">
+                                <div class="value-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="2" y1="12" x2="22" y2="12" />
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="value-text">Full Stack</div>
+                                    <div class="value-sub">End-to-end ownership</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="about-value">
-                            <div class="value-icon">⚡</div>
-                            <div>
-                                <div class="value-text">Performance</div> 
-                                <div class="value-sub">Optimized for scale</div>
-                               
-                            </div>
-                        </div>
-                        <div class="about-value">
-                            <div class="value-icon">🤖</div>
-                            <div>
-                                <div class="value-text">AI-Driven</div>  
-                                <div class="value-sub">Intelligent solutions</div>
-                              
-                          </div>
-                        </div>
-                        <div class="about-value">
-                            <div class="value-icon">🌐</div>
-                            <div>
-                                <div class="value-text">Full Stack</div> 
-                                <div class="value-sub">End-to-end ownership</div>
-                              
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -177,7 +278,13 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-category reveal delay-1">
-                    <div class="skill-cat-icon">💻</div>
+                    <div class="skill-cat-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
                     <div class="skill-cat-title">Languages</div>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
@@ -188,7 +295,14 @@
                     </div>
                 </div>
                 <div class="skill-category reveal delay-2">
-                    <div class="skill-cat-icon">⚛️</div>
+                    <div class="skill-cat-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="2" />
+                            <path d="M12 5c6.627 0 12 1.567 12 3.5S18.627 12 12 12 0 10.433 0 8.5 5.373 5 12 5z" />
+                            <path d="M12 12c6.627 0 12 1.567 12 3.5S18.627 19 12 19 0 17.433 0 15.5 5.373 12 12 12z" />
+                        </svg>
+                    </div>
                     <div class="skill-cat-title">Frontend</div>
                     <div class="skill-tags">
                         <span class="skill-tag">React.js</span>
@@ -198,7 +312,13 @@
                     </div>
                 </div>
                 <div class="skill-category reveal delay-3">
-                    <div class="skill-cat-icon">🛠️</div>
+                    <div class="skill-cat-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
                     <div class="skill-cat-title">Backend</div>
                     <div class="skill-tags">
                         <span class="skill-tag">Node.js</span>
@@ -209,7 +329,15 @@
                     </div>
                 </div>
                 <div class="skill-category reveal delay-4">
-                    <div class="skill-cat-icon">🤖</div>
+                    <div class="skill-cat-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h.01" />
+                            <rect x="4" y="4" width="16" height="12" rx="2" ry="2" />
+                            <path d="M12 20v2" />
+                            <path d="M8 22h8" />
+                        </svg>
+                    </div>
                     <div class="skill-cat-title">AI & Security</div>
                     <div class="skill-tags">
                         <span class="skill-tag">OpenCV</span>
@@ -221,7 +349,15 @@
                     </div>
                 </div>
                 <div class="skill-category reveal delay-5">
-                    <div class="skill-cat-icon">🎨</div>
+                    <div class="skill-cat-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h.01" />
+                            <rect x="4" y="4" width="16" height="12" rx="2" ry="2" />
+                            <path d="M12 20v2" />
+                            <path d="M8 22h8" />
+                        </svg>
+                    </div>
                     <div class="skill-cat-title">Design & Tools</div>
                     <div class="skill-tags">
                         <span class="skill-tag">UI/UX Design</span>
@@ -231,7 +367,14 @@
                     </div>
                 </div>
                 <div class="skill-category reveal delay-6">
-                    <div class="skill-cat-icon">📊</div>
+                    <div class="skill-cat-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10" />
+                            <line x1="12" y1="20" x2="12" y2="4" />
+                            <line x1="6" y1="20" x2="6" y2="14" />
+                        </svg>
+                    </div>
                     <div class="skill-cat-title">Data & Analytics</div>
                     <div class="skill-tags">
                         <span class="skill-tag">Big Data</span>
@@ -311,23 +454,60 @@
             <div class="contact-center reveal">
                 <!-- 4 contact method cards in a row -->
                 <div class="contact-cards-row">
-                    <a href="tel:6380231903" class="contact-method-card">
-                        <span class="cmc-icon">📞</span>
+                    <a href="tel:6380231903" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                        <span class="cmc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </span>
                         <div class="cmc-label">Phone</div>
                         <div class="cmc-value">6380231903</div>
                     </a>
-                    <a href="mailto:manimehalaijohn@gmail.com" class="contact-method-card">
-                        <span class="cmc-icon">✉️</span>
+                    <a href="mailto:manimehalaijohn@gmail.com" target="_blank" rel="noopener noreferrer"
+                        class="contact-method-card">
+                        <span class="cmc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </span>
                         <div class="cmc-label">Email</div>
                         <div class="cmc-value">manimehalaijohn@gmail.com</div>
                     </a>
-                    <a href="#" class="contact-method-card">
-                        <span class="cmc-icon">💼</span>
+                    <a href="https://www.linkedin.com/in/manimehalai" target="_blank" rel="noopener noreferrer"
+                        class="contact-method-card">
+                        <span class="cmc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </span>
                         <div class="cmc-label">LinkedIn</div>
                         <div class="cmc-value">linkedin.com/in/manimehalai</div>
                     </a>
-                    <a href="#" class="contact-method-card">
-                        <span class="cmc-icon">🐱</span>
+                    <a href="https://github.com/Manimehalaijohn" target="_blank" rel="noopener noreferrer"
+                        class="contact-method-card">
+                        <span class="cmc-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </span>
                         <div class="cmc-label">GitHub</div>
                         <div class="cmc-value">github.com/manimehalai</div>
                     </a>
@@ -341,26 +521,42 @@
                         <div class="contact-form-inner">
                             <div class="form-group">
                                 <label class="form-label" for="name">Your Name</label>
-                                <input type="text" id="name" class="form-input" placeholder="Jane Smith">
+                                <input type="text" id="name" class="form-input">
                                 <div class="form-error" id="nameErr">Please enter your name</div>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="email">Email Address</label>
-                                <input type="email" id="email" class="form-input" placeholder="jane@example.com">
+                                <input type="email" id="email" class="form-input">
                                 <div class="form-error" id="emailErr">Please enter a valid email</div>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="message">Message</label>
-                                <textarea id="message" class="form-textarea"
-                                    placeholder="Hello Manimehalai, I'd like to..."></textarea>
+                                <textarea id="message" class="form-textarea"></textarea>
                                 <div class="form-error" id="msgErr">Please enter a message</div>
                             </div>
                         </div>
                         <button type="button" class="submit-btn" id="submitBtn" onclick="submitForm()">Send Message
-                            ✦</button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" style="margin-left:0.5rem;">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg></button>
                     </div>
                     <div class="form-success" id="formSuccess">
-                        <div style="font-size:3rem;margin-bottom:0.75rem">✦</div>
+                        <div style="color:var(--primary);margin-bottom:0.75rem">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+                                </path>
+                                <path d="m5 3 1 1"></path>
+                                <path d="m19 21 1 1"></path>
+                                <path d="m5 21 1-1"></path>
+                                <path d="m19 3 1-1"></path>
+                            </svg>
+                        </div>
                         <div>Message sent! I'll get back to you soon.</div>
                     </div>
                 </div>
@@ -368,20 +564,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-logo">Mani<span>.</span></div>
-                <div class="footer-copy">© 2025 Manimehalai L — Crafted with ♥</div>
-                <div class="footer-links">
-                    <a href="#hero">Top</a>
-                    <a href="#projects">Work</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+
 
     <!-- MODAL -->
     <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-label="Project details">
