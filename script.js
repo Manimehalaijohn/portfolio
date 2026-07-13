@@ -27,6 +27,48 @@ const icons = {
 const projects = [
     {
         id: 1,
+        title: 'STS Mobile Application',
+        short: 'A secure cross-platform React Native app with robust role-based admin controls and real-time operations.',
+        image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80',
+        tech: ['React Native', 'TypeScript', 'Redux Toolkit', 'REST API', 'Admin Controls'],
+        highlights: [
+            'Developed cross-platform mobile application using React Native and TypeScript',
+            'Built custom components like CustomButton and PasswordInput for design consistency',
+            'Implemented complex role-based access control (RBAC) screen routes for managers and admins',
+            'Integrated RESTful API communication via authApi and custom Axios instance clients',
+            'Designed a smooth splash screen transition and optimized image asset loading'
+        ]
+    },
+    {
+        id: 2,
+        title: 'AI-Powered Resume Screening System',
+        short: 'An intelligent resume parser and ranker that speeds up candidate selection using NLP and ML.',
+        image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+        tech: ['Python', 'NLP', 'Machine Learning', 'Flask', 'React.js'],
+        highlights: [
+            'Developed an automated resume screening pipeline to extract candidate skills, experience, and education',
+            'Utilized Natural Language Processing (NLP) models to parse resumes in PDF and Word formats',
+            'Implemented ranking algorithms matching candidate profiles to job descriptions',
+            'Reduced manual HR screening time by 75% while keeping evaluation objective',
+            'Built interactive dashboards for HR managers to view parsed and ranked results'
+        ]
+    },
+    {
+        id: 3,
+        title: 'Banking LMS (Learning Management System)',
+        short: 'A highly secure, compliant training platform designed for banking professionals and assessment workflows.',
+        image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
+        tech: ['Node.js', 'Express.js', 'React.js', 'MongoDB', 'REST APIs', 'RBAC'],
+        highlights: [
+            'Designed and built a Learning Management System (LMS) tailored for the banking domain',
+            'Implemented secure login, module lock tracking, and course progress saving',
+            'Created modular video lessons and interactive assessments with automatic grading',
+            'Configured strict role-based authorization to separate employee trainees, trainers, and administrators',
+            'Generated automated certificates of completion and custom manager reporting dashboards'
+        ]
+    },
+    {
+        id: 4,
         title: 'Hybrid Security for Medical Imaging Using Blockchain',
         short: 'Multi-layer security framework using AES-256 + IPFS for tamper-proof medical data.',
         image: 'https://coingeek.com/wp-content/uploads/2019/02/new-blockchain-based-platform-bitfury-longenesis-mdw.jpg',
@@ -41,7 +83,7 @@ const projects = [
         ]
     },
     {
-        id: 2,
+        id: 5,
         title: 'Online Appointment System (MERN Stack)',
         short: 'Full-stack scheduling system supporting 100+ concurrent users with role-based access.',
         image: 'https://media.istockphoto.com/id/1081869356/photo/taking-on-the-late-shift-with-true-dedication.jpg?s=612x612&w=0&k=20&c=6cd0XCc7SXbwh3gDTDgg7yjljBPbW8gAmUUmDCQqs9E=',
@@ -56,7 +98,7 @@ const projects = [
         ]
     },
     {
-        id: 3,
+        id: 6,
         title: 'Eligibility Check Web Application',
         short: 'Responsive web app for automated eligibility validation using SQL backend logic.',
         image: 'https://ispe-events.eu/images/why-is-quality-assurance-important.jpg',
@@ -71,7 +113,7 @@ const projects = [
         ]
     },
     {
-        id: 4,
+        id: 7,
         title: 'Emotion Detection System',
         short: 'Real-time CNN-based facial emotion classifier with 85–90% prediction accuracy.',
         image: 'https://www.softwebsolutions.com/wp-content/uploads/2022/05/Facial-Recognition.jpg',
@@ -89,6 +131,13 @@ const projects = [
 
 const experiences = [
     {
+        role: 'Junior Software Developer',
+        company: 'Cybervault Innovations and Technologies Pvt. Ltd.',
+        period: 'Present',
+        desc: 'Developing the STS Mobile Application, AI-Powered Resume Screening platform, and Banking LMS using React Native, TypeScript, React, and Node.js.',
+        icon: icons.briefcase
+    },
+    {
         role: 'Software Trainee',
         company: 'Cybervault Innovations and Technologies Pvt. Ltd.',
         period: 'Internship',
@@ -101,13 +150,6 @@ const experiences = [
         period: 'Internship',
         desc: 'Gained hands-on experience in SQL database management — writing and optimizing queries to support efficient data handling in real-time projects.',
         icon: icons.database
-    },
-    {
-        role: 'UI/UX Intern',
-        company: 'Powersoft Techno Solution Pvt Ltd',
-        period: 'Internship',
-        desc: 'Completed training in UI/UX design principles and applied user-centered design strategies on live company projects.',
-        icon: icons.tool
     }
 ];
 
